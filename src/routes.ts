@@ -1,6 +1,9 @@
 import express, {Request, Response,} from "express";
+import ReplayController from "./controller/replay_controller";
 
-const router = express.Router()
+const router = express.Router();
+
+router.use("/replay", ReplayController);
 
 router.get('/', (req: Request, res: Response) => {
 	console.log("A GET request was sent!");
